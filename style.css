@@ -1,0 +1,149 @@
+:root{
+    --border-color: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url("Norse-Bold.otf") format("opentype");
+}
+
+.content{
+    /*makes viewpoert 100% of user browser window*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.picture{
+    background-image: url(background_img.jpg);
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    width: 40vw;
+}
+
+#logo{
+    height: 100%;
+    width: 100%;
+    max-height: 20%;
+    max-width: 20%;
+}
+
+#name{
+    color: white;
+    font-size: 60px;
+    font-family: 'Norse-Bold';
+
+}
+
+.logo_name{
+    position: relative;
+    top: 20vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(0,0,0,0.5);
+}
+
+.sign_up{
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    width: 60vw;
+    padding-top: 5%; /* we use padding instead of margin because it keeps background color*/
+
+}
+
+.text{
+    font-weight: bold;
+    height: 20vh;
+    width: 50vw;
+    padding-left: 5%;
+}
+
+.form-content{
+    background-color: white;
+    height: 35vh;
+}
+
+#form-text{
+    font-weight: bold;
+    padding-left: 5%;
+}
+
+form{
+    /*need ot put this here cuz parent, kid logic*/
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    padding-left:5%;
+    padding-right: 30%;
+    padding-top: 2%;
+}
+
+input{
+    border-color: gainsboro;
+    border-width: 1px;
+    border-radius: 3px; /*makes the input border round rather than square like*/
+    font-size: 15px;
+}
+
+/*when you click in the input*/
+input:focus{
+    outline: none;
+    border: 2px solid var(--border-color);
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    background: #596D48;
+    color: white;
+    width: 13vw;
+    height: 8vh;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+button:hover{
+    background-color: purple;
+}
+
+.alr-account{
+    padding-left: 5%;
+}
+
+#alr-login{
+    text-decoration: none; /*removes the default underline, makes it a nomral looking text*/
+    font-weight: bold;
+    color: red;
+}
